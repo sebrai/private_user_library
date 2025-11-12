@@ -12,6 +12,9 @@ app =Flask(__name__)
 def main():
     return render_template("index.html")
 
+@app.route('/members')
+def members():
+    return "<h1> hello</h1>"
 
 
 if __name__ == '__main__':
