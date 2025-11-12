@@ -14,6 +14,14 @@ def main():
 
 @app.route('/members')
 def members():
+    # mydb = mysql.connector.connect(
+    # host = "10.200.14.13",
+    # port= 3306,
+    # user = 'extsebrai',
+    # password = password, 
+    # database = 'evil_lm'
+    # )
+    # mycursor = mydb.cursor()
     return "<h1> hello</h1>"
 
 
