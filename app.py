@@ -26,7 +26,7 @@ def members():
     mycursor.execute("SELECT * FROM members")
     result = mycursor.fetchall()
     print(result)
-    return render_template('members.html')
+    return render_template('members.html',data =result)
 
 @app.route('/events')
 def events():
