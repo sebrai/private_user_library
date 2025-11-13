@@ -14,16 +14,22 @@ def main():
 
 @app.route('/members')
 def members():
-    # mydb = mysql.connector.connect(
-    # host = "10.200.14.13",
-    # port= 3306,
-    # user = 'extsebrai',
-    # password = password, 
-    # database = 'evil_lm'
-    # )
-    # mycursor = mydb.cursor()
+    mydb = mysql.connector.connect(
+    host = "10.200.14.13",
+    port= 3306,
+    user = 'evillm',
+    password = password, 
+    database = 'evil_lm',
+    use_pure=True
+    )
+    mycursor = mydb.cursor()
+    mycursor.execute("SELECT * FROM members")
+    result = mycursor.fetchall()
+    print(result)
     return "<h1> hello</h1>"
 
-
+@app.route('/events')
+def events():
+    return 'helle'
 if __name__ == '__main__':
     app.run(debug =True)
