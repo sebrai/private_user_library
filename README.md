@@ -84,7 +84,7 @@ INT \| Primærnøkkel \| \| customers \| name \| VARCHAR(255) \| Navn \|
 
 ## 6. Programstruktur
 
-    projectnavn/
+    evil_LM/
      ├── app.py
      ├── templates/
      ├── static/
@@ -92,7 +92,7 @@ INT \| Primærnøkkel \| \| customers \| name \| VARCHAR(255) \| Navn \|
 
 Databasestrøm:
 
-    HTML → Flask → MariaDB → Flask → HTML-tabell
+    HTML(request) → Flask → MariaDB → Flask → HTML-tabell
 
 ------------------------------------------------------------------------
 
@@ -129,7 +129,7 @@ Forklar ruter og funksjoner (kort).
 
 ------------------------------------------------------------------------
 
-## 11. Kildeliste
+## 11. sources
 
 -   w3schools\
 -   flask.palletsprojects.com
