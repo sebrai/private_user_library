@@ -75,13 +75,9 @@ INT \| Primærnøkkel \| \| customers \| name \| VARCHAR(255) \| Navn \|
 \| customers \| address \| VARCHAR(255) \| Adresse \|
 
 **SQL-eksempel:**
-
+*** insert example***
 ``` sql
-CREATE TABLE customers (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255),
-  address VARCHAR(255)
-);
+    INSERT INTO members(name,email) VALUES('yourname','your@email.com');
 ```
 
 ------------------------------------------------------------------------
