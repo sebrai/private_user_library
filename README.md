@@ -75,7 +75,7 @@ INT \| Primærnøkkel \| \| customers \| name \| VARCHAR(255) \| Navn \|
 \| customers \| address \| VARCHAR(255) \| Adresse \|
 
 **SQL-eksempel:**
-*** insert example***
+**insert example**
 ``` sql
     INSERT INTO members(name,email) VALUES('yourname','your@email.com');
 ```
