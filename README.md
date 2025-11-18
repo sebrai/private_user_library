@@ -56,11 +56,9 @@ Eksempel:
 
 ## 4. Prosjektstyring -- GitHub Projects (Kanban)
 
--   To Do / In Progress / Done\
--   Issues\
--   Skjermbilde (valgfritt)
+https://github.com/users/sebrai/projects/3/views/1
 
-Refleksjon: Hvordan hjalp Kanban arbeidet?
+i use kanban to organize work
 
 ------------------------------------------------------------------------
 
@@ -108,8 +106,8 @@ Refleksjon: Hvordan hjalp Kanban arbeidet?
      ├── app.py
      ├── templates/
      ├── static/
-     └── .venv
-
+     ├── .venv
+     └── password.txt
 Databasestrøm:
 
     HTML(request) → Flask → MariaDB → Flask → HTML-tabell
@@ -124,7 +122,7 @@ Forklar ruter og funksjoner (kort).
 
 ## 8. Sikkerhet og pålitelighet
 
--   .env\
+
 -   Miljøvariabler\
 -   Parameteriserte spørringer\
 -   Validering\
