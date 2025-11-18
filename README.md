@@ -71,25 +71,25 @@ Refleksjon: Hvordan hjalp Kanban arbeidet?
 **Tables:**\
 
 **members:**\
-        +------------+--------------+------+-----+-----------+----------------+
-        | Field      | Type         | Null | Key | Default   | Extra          |
-        +------------+--------------+------+-----+-----------+----------------+
-        | id         | int(11)      | NO   | PRI | NULL      | auto_increment |
-        | name       | varchar(50)  | NO   |     | NULL      |                |
-        | email      | varchar(100) | NO   | UNI | NULL      |                |
-        | date_start | date         | YES  |     | curdate() |                |
-        | role       | varchar(50)  | NO   |     | 'grunt'   |                |
-        +------------+--------------+------+-----+-----------+----------------+
+        +------------+--------------+------+-----+-----------+----------------+\
+        | Field      | Type         | Null | Key | Default   | Extra          |\
+        +------------+--------------+------+-----+-----------+----------------+\
+        | id         | int(11)      | NO   | PRI | NULL      | auto_increment |\
+        | name       | varchar(50)  | NO   |     | NULL      |                |\
+        | email      | varchar(100) | NO   | UNI | NULL      |                |\
+        | date_start | date         | YES  |     | curdate() |                |\
+        | role       | varchar(50)  | NO   |     | 'grunt'   |                |\
+        +------------+--------------+------+-----+-----------+----------------+\
 
-**done(old jobs)**\
-        +-------+--------------+------+-----+-----------------+----------------+
-        | Field | Type         | Null | Key | Default         | Extra          |
-        +-------+--------------+------+-----+-----------------+----------------+
-        | id    | int(11)      | NO   | PRI | NULL            | auto_increment |
-        | title | varchar(100) | NO   | UNI | NULL            |                |
-        | descr | tinytext     | YES  |     | 'no decription' |                |
-        | date  | date         | YES  |     | curdate()       |                |
-        +-------+--------------+------+-----+-----------------+----------------+
+**done(old jobs):**\
+        +-------+--------------+------+-----+-----------------+----------------+\
+        | Field | Type         | Null | Key | Default         | Extra          |\
+        +-------+--------------+------+-----+-----------------+----------------+\
+        | id    | int(11)      | NO   | PRI | NULL            | auto_increment |\
+        | title | varchar(100) | NO   | UNI | NULL            |                |\
+        | descr | tinytext     | YES  |     | 'no decription' |                |\
+        | date  | date         | YES  |     | curdate()       |                |\
+        +-------+--------------+------+-----+-----------------+----------------+\
 
 **SQL-eksempel:**
 **insert example**
