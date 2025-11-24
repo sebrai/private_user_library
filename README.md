@@ -1,15 +1,21 @@
 # private_user_library
 
-## 1. frontpage
+## 1. pages
 
 **evil LM:**\
 **Sebastian Branden:**\
 **2IMI:**\
 **10/11/25:**
-
 **description:**\
 *this is a hub for evil LM where you can see future plans, members and already executed missions*
 
+### a. frontpage
+*this is the frontpage of the site*
+
+### b. members page
+*this shows all mambers in evil_LM*
+
+### c.
 ------------------------------------------------------------------------
 
 
