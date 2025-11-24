@@ -119,8 +119,7 @@ i use kanban to organize work
      ├── templates/
      ├── static/
      ├── .venv
-     ├── .env
-     └── password.txt
+     └── .env
 Databasestrøm:
 
     HTML(request) → Flask → MariaDB → Flask → HTML-tabell
@@ -136,7 +135,7 @@ Forklar ruter og funksjoner (kort).
 ## 8. Sikkerhet og pålitelighet
 
 
--   Miljøvariabler\
+-   Miljøvariabler: *password, host, port, user and db*\
 -   Parameteriserte spørringer\
 -   Validering\
 -   Feilhåndtering
