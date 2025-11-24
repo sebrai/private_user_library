@@ -5,6 +5,10 @@ import sys
 import os
 load_dotenv()
 password = os.getenv("password")
+host = os.getenv("host")
+port = os.getenv("port")
+userdb = os.getenv("user")
+dbname = os.getenv("db")
 app =Flask(__name__)
 
 @app.route('/')
@@ -14,11 +18,11 @@ def main():
 @app.route('/members')
 def members():
     mydb = mysql.connector.connect(
-    host = "10.200.14.13",
-    port= 3306,
-    user = 'evillm',
+    host = host,
+    port= int(port),
+    user = userdb,
     password = password, 
-    database = 'evil_lm',
+    database = dbname,
     use_pure=True
     )
     mycursor = mydb.cursor()

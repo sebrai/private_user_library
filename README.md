@@ -46,6 +46,7 @@
 
 *uses a flask python enviorment with flask, and mysql_connector installed*
 
+*.env file keeps password and other imortant info safe*
 ### Nettverksoppsett
 
 -   Nettverksdiagram
