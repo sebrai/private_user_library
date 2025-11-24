@@ -1,11 +1,10 @@
 from flask import Flask, render_template, request
 import mysql.connector
+from dotenv import load_dotenv
 import sys
-try:
-    with open("password.txt","r")  as f:
-        password = f.read()
-except FileNotFoundError:
-    print("password file doesnt exist")
+import os
+load_dotenv()
+password = os.getenv("password")
 app =Flask(__name__)
 
 @app.route('/')
@@ -30,6 +29,12 @@ def members():
 
 @app.route('/events')
 def events():
-    return 'helle'
+    return render_template('upcomming.html')
+
+
+@app.route('/acomplishments')
+def done():
+    return  render_template('done.html')
+
 if __name__ == '__main__':
     app.run(debug =True)

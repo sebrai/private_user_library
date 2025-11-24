@@ -15,7 +15,12 @@
 ### b. members page
 *this shows all mambers in evil_LM*
 
-### c.
+### c. accomplisments
+*this show what evil_LM has completed*
+
+### d. events page
+
+*shows uppcomming events*
 ------------------------------------------------------------------------
 
 
@@ -113,6 +118,7 @@ i use kanban to organize work
      ├── templates/
      ├── static/
      ├── .venv
+     ├── .env
      └── password.txt
 Databasestrøm:
 
