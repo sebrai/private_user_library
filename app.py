@@ -28,8 +28,12 @@ def members():
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM members")
     result = mycursor.fetchall()
-    print(result)
-    return render_template('members.html',data =result)
+    format_result = []
+    for items in result:
+       thing = (items[0],items[1],items[2],items[3].isoformat())
+       format_result.append(thing)
+    print(result,format_result)
+    return render_template('members.html',data =format_result)
 
 @app.route('/events')
 def events():
