@@ -32,7 +32,7 @@ def members():
     for items in result:
        thing = (items[0],items[1],items[2],items[3].isoformat())
        format_result.append(thing)
-    print(result,format_result)
+    # print(result,format_result)
     return render_template('members.html',data =format_result)
 
 @app.route('/events')
