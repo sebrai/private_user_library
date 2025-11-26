@@ -88,7 +88,7 @@ def delete(id):
     )
     mycursor = mydb.cursor()
     mycursor.execute("DELETE FROM members WHERE id = %s",(id,))
-    #this remains uncommit ass i dont have a way to add back members that are deleted
+    mydb.commit()
 
 
 
