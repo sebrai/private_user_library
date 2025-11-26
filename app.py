@@ -102,10 +102,31 @@ def delete(id):
        fresult.append(thing)
     return render_template('members.html',data = fresult)
 
-@app.route('/members/add')
+@app.route('/members/add', methods=['GET','POST'])
 def addmem():
-    return "yay you want to add a member"
-
+    if request.method == 'POST':
+        name = request.form['name']
+        email =request.form['email']
+        mydb = mysql.connector.connect(
+            host = host,
+            port= int(port),
+            user = userdb,
+            password = password, 
+            database = dbname,
+            use_pure=True
+        )
+        mycursor = mydb.cursor()
+        mycursor.execute("INSERT INTO members (name,email) VALUES(%s,%s)",(name,email))
+        mydb.commit()
+        mycursor.execute("SELECT * FROM members")
+        result = mycursor.fetchall()
+        fresult = []
+        for items in result:
+            thing = (items[0],items[1],items[2],items[3].isoformat())
+            fresult.append(thing)
+        return render_template('members.html',data = fresult)
+    else:
+        return render_template('addmem.html')
 @app.route('/events')
 def events():
     return render_template('upcomming.html')
