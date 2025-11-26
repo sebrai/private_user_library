@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alter {{memname}}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css' )}}">
+</head>
+
+<body>
+    <div id="data" hidden>{{data}}</div>
+
+    <form method="post">
+        <input type="text" name="name" id="name">
+        <input type="email" name="email" id="email">
+        <input type="submit" value="submit changes">
+    </form>
+    <script src="{{url_for('static',filename='js/processes.js')}}"></script>
+    <script>
+        let nname = document.getElementById("name")
+        let email = document.getElementById("email")
+        nname.value = data[0][0]
+        email.value = data[0][1]
+    </script>
+</body>
+
+</html>

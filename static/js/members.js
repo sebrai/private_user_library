@@ -14,13 +14,13 @@ for (let J = 0; J < data.length; J++) {
     alterbtn.appendChild(document.createTextNode("change"))
     let alter = document.createElement("a")
     alter.appendChild(alterbtn)
-    alter.href = "members/alter/" + element[0]
+    alter.href = "/members/alter/" + element[0]
 
     let deletebtn = document.createElement("button")
     deletebtn.appendChild(document.createTextNode("delete"))
     let del = document.createElement("a")
     del.appendChild(deletebtn)
-    del.href = "members/delete/" + element[0]
+    del.href = "/members/delete/" + element[0]
 
     let control = document.createElement("td")
     control.appendChild(alter)
