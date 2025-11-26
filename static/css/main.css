@@ -82,3 +82,27 @@ td{
     border: solid black 2px;
     border-radius: 8px;
 }
+form{
+    background-color: cadetblue;
+    border-radius: 20px;
+    width: 50%;
+    min-height: 30vh;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 10px;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+form input{
+    border-radius: 5px;
+    /* margin-left: 10px; */
+}
+form .title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+form .content{
+    display:flex;
+    justify-content: space-evenly;
+}

@@ -13,7 +13,8 @@
 *this is the frontpage of the site*
 
 ### b. members page
-*this shows all mambers in evil_LM*
+*this shows all members in evil_LM*\
+*this also include add new member page and an alter page*
 
 ### c. accomplisments
 *this show what evil_LM has completed*

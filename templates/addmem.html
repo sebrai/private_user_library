@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add a new member</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css' )}}">
 </head>
+
 <body>
-    <form method="post">
-        <input type="text" name="name" id="name">
-        <input type="email" name="email" id="email">
-        <input type="submit" value="submit changes">
+       <form method="post">
+        <h1 class="title">add new member!</h1>
+        <div class="content">
+            <input type="text" name="name" id="name" placeholder="your name">
+            <input type="email" name="email" id="email" placeholder="your email">
+            <input type="submit" value="submit changes">
+        </div>
+
     </form>
-    <script src="{{url_for('static',filename='js/processes.js')}}"></script> 
+    <script src="{{url_for('static',filename='js/processes.js')}}"></script>
 </body>
+
 </html>
