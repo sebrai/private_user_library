@@ -35,6 +35,18 @@ def members():
     # print(result,format_result)
     return render_template('members.html',data =format_result)
 
+@app.route('/members/alter/<id>')
+def alter(id):
+    return id
+
+@app.route('/members/delete/<id>')
+def delete(id):
+    return id
+
+@app.route('/members/add')
+def addmem():
+    return "yay you want to add a member"
+
 @app.route('/events')
 def events():
     return render_template('upcomming.html')
