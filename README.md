@@ -82,7 +82,8 @@ i use kanban to organize work
 **Tables:**
 
 **members:**
-```
+
+``` sql
         +------------+--------------+------+-----+-----------+----------------+
         | Field      | Type         | Null | Key | Default   | Extra          |
         +------------+--------------+------+-----+-----------+----------------+
@@ -93,8 +94,10 @@ i use kanban to organize work
         | role       | varchar(50)  | NO   |     | 'grunt'   |                |
         +------------+--------------+------+-----+-----------+----------------+
 ```
+
 **done(old jobs):**
-```
+
+``` sql
         +-------+--------------+------+-----+-----------------+----------------+
         | Field | Type         | Null | Key | Default         | Extra          |
         +-------+--------------+------+-----+-----------------+----------------+
@@ -104,9 +107,11 @@ i use kanban to organize work
         | date  | date         | YES  |     | curdate()       |                |
         +-------+--------------+------+-----+-----------------+----------------+
 ```
+
 **SQL-eksempel:**
 
 **insert example**
+
 ``` sql
     INSERT INTO members(name,email) VALUES('yourname','your@email.com');
 ```
