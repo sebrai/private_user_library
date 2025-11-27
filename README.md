@@ -115,11 +115,12 @@ i use kanban to organize work
         | Field          | Type         | Null | Key | Default | Extra          |
         +----------------+--------------+------+-----+---------+----------------+
         | id             | int(11)      | NO   | PRI | NULL    | auto_increment |
-        | title          | varchar(63)  | YES  |     | ""      |                |
+        | title          | varchar(63)  | YES  |     |         |                |
         | descr          | varchar(255) | YES  |     | NULL    |                |
         | scale          | varchar(255) | YES  |     | NULL    |                |
         | members_needed | int(11)      | YES  |     | NULL    |                |
         | done           | tinyint(1)   | YES  |     | 0       |                |
+        | cur_members    | int(11)      | YES  |     | 0       |                |
         +----------------+--------------+------+-----+---------+----------------+
 
 
