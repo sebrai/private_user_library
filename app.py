@@ -142,6 +142,26 @@ def events():
     result = mycursor.fetchall()
     return render_template('upcomming.html', data = result)
 
+@app.route('/events/finish/<id>')
+def finish(id):
+    mydb = mysql.connector.connect(
+    host = host,
+    port= int(port),
+    user = userdb,
+    password = password, 
+    database = dbname,
+    use_pure=True
+    )
+    mycursor = mydb.cursor()
+    mycursor.execute("UPDATE events SET done = 1 WHERE  ID = %s",(id,))
+    mydb.commit()
+    
+
+
+
+    mycursor.execute("SELECT * FROM events")
+    result = mycursor.fetchall()
+    return render_template('upcomming.html', data = result)
 
 @app.route('/acomplishments')  # all pages dedaceded to the done page ------------------------------------------------------------------------------------
 def done():
