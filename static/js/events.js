@@ -13,6 +13,21 @@ for (let J = 0; J < data.length; J++) {
         box.appendChild(text)
         row.appendChild(box)
     }
-   
+    let add_memberbtn = document.createElement("button")
+    add_memberbtn.appendChild(document.createTextNode("join effort"))
+    let add_member = document.createElement("a")
+    add_member.appendChild(add_memberbtn)
+    add_member.href = "/events/add_member/" + element[0]
+
+    let finishbtn = document.createElement("button")
+    finishbtn.appendChild(document.createTextNode("finish"))
+    let finish = document.createElement("a")
+    finish.appendChild(finishbtn)
+    finish.href = "/events/finish/" + element[0]
+
+    let control = document.createElement("td")
+    control.appendChild(add_member)
+    control.appendChild(finish)
+    row.appendChild(control)
     datatable.appendChild(row)
 }
