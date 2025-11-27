@@ -14,7 +14,18 @@
         <div><a href="{{url_for('events')}}">uppcomming events</a></div>
     </nav>
     <div  id="data" hidden >{{data}}</div>
-    <table id="table" class="datatable"></table>
+    <table id="table" class="datatable">
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>descriptin</th>
+            <th>event scale</th>
+            <th>members needed</th>
+            <th>finished</th>
+            <th>count accepted</th>
+            <th>actions</th>
+        </tr>
+    </table>
     <script src="{{url_for('static',filename='js/processes.js')}}"></script>
     <script src="{{url_for('static',filename='js/events.js')}}"></script>
 </body>
