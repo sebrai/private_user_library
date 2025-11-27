@@ -98,16 +98,32 @@ i use kanban to organize work
 **done(old jobs):**
 
 ``` sql
-        +-------+--------------+------+-----+-----------------+----------------+
-        | Field | Type         | Null | Key | Default         | Extra          |
-        +-------+--------------+------+-----+-----------------+----------------+
-        | id    | int(11)      | NO   | PRI | NULL            | auto_increment |
-        | title | varchar(100) | NO   | UNI | NULL            |                |
-        | descr | tinytext     | YES  |     | 'no decription' |                |
-        | date  | date         | YES  |     | curdate()       |                |
-        +-------+--------------+------+-----+-----------------+----------------+
+        +----------+--------------+------+-----+-----------------+----------------+
+        | Field    | Type         | Null | Key | Default         | Extra          |
+        +----------+--------------+------+-----+-----------------+----------------+
+        | id       | int(11)      | NO   | PRI | NULL            | auto_increment |
+        | title    | varchar(100) | NO   | UNI | NULL            |                |
+        | descr    | tinytext     | YES  |     | 'no decription' |                |
+        | date     | date         | YES  |     | curdate()       |                |
+        | event_id | int(11)      | YES  | MUL | NULL            |                |
+        +----------+--------------+------+-----+-----------------+----------------+
 ```
+**events(upcomming):**
 
+``` sql
+        +----------------+--------------+------+-----+---------+----------------+
+        | Field          | Type         | Null | Key | Default | Extra          |
+        +----------------+--------------+------+-----+---------+----------------+
+        | id             | int(11)      | NO   | PRI | NULL    | auto_increment |
+        | title          | varchar(63)  | YES  |     | ""      |                |
+        | descr          | varchar(255) | YES  |     | NULL    |                |
+        | scale          | varchar(255) | YES  |     | NULL    |                |
+        | members_needed | int(11)      | YES  |     | NULL    |                |
+        | done           | tinyint(1)   | YES  |     | 0       |                |
+        +----------------+--------------+------+-----+---------+----------------+
+
+
+```
 **SQL-eksempel:**
 
 **insert example**
@@ -116,6 +132,16 @@ i use kanban to organize work
     INSERT INTO members(name,email) VALUES('yourname','your@email.com');
 ```
 
+**events table creation**
+
+``` sql
+        CREATE TABLE events  ( id INT AUTO_INCREMENT PRIMARY KEY,
+                title VARCHAR(63) DEFAULT '', 
+                descr VARCHAR(255), 
+                scale VARCHAR(255), 
+                members_needed INT, 
+                done BOOLEAN DEFAULT 0);
+```
 ------------------------------------------------------------------------
 
 ## 6. Programstruktur
