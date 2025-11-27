@@ -15,7 +15,7 @@ app =Flask(__name__)
 def main():
     return render_template("index.html")
 
-@app.route('/members')
+@app.route('/members') # all pages dedaceded to the members page ------------------------------------------------------------------------------------
 def members():
     mydb = mysql.connector.connect(
     host = host,
@@ -127,13 +127,25 @@ def addmem():
         return render_template('members.html',data = fresult)
     else:
         return render_template('addmem.html')
-@app.route('/events')
+@app.route('/events')  # all pages dedaceded to the events page ------------------------------------------------------------------------------------
 def events():
-    return render_template('upcomming.html')
+    mydb = mysql.connector.connect(
+    host = host,
+    port= int(port),
+    user = userdb,
+    password = password, 
+    database = dbname,
+    use_pure=True
+    )
+    mycursor = mydb.cursor()
+    mycursor.execute("SELECT * FROM events")
+    result = mycursor.fetchall()
+    return render_template('upcomming.html', data = result)
 
 
-@app.route('/acomplishments')
+@app.route('/acomplishments')  # all pages dedaceded to the done page ------------------------------------------------------------------------------------
 def done():
+    
     return  render_template('done.html')
 
 if __name__ == '__main__':

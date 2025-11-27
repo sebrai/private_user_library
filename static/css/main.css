@@ -81,6 +81,7 @@ td{
     width: 100px;
     border: solid black 2px;
     border-radius: 8px;
+    text-align: center;
 }
 form{
     background-color: cadetblue;

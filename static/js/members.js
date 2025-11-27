@@ -1,4 +1,30 @@
 datatable = document.getElementById("table")
+let tnid = document.createTextNode("id")
+let tnname = document.createTextNode("name")
+let tncolor = document.createTextNode("email")
+let tnjoin = document.createTextNode("joined on")
+let t_options = document.createTextNode("actions")
+
+let eid = document.createElement("th")
+let ename = document.createElement("th")
+let ecolor = document.createElement("th")
+let ejoin = document.createElement("th")
+let eopt = document.createElement("th")
+
+eid.appendChild(tnid)
+ename.appendChild(tnname)
+ecolor.appendChild(tncolor)
+ejoin.appendChild(tnjoin)
+eopt.appendChild(t_options)
+
+let headrow = document.createElement("tr")
+headrow.appendChild(eid)
+headrow.appendChild(ename)
+headrow.appendChild(ecolor)
+headrow.appendChild(ejoin)
+headrow.appendChild(eopt)
+
+table.appendChild(headrow)
 for (let J = 0; J < data.length; J++) {
     const element = data[J];
 
