@@ -138,7 +138,7 @@ def events():
     use_pure=True
     )
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM events")
+    mycursor.execute("SELECT * FROM events WHERE done = 0")
     result = mycursor.fetchall()
     return render_template('upcomming.html', data = result)
 
@@ -155,7 +155,7 @@ def finish(id):
     mycursor = mydb.cursor()
     mycursor.execute("UPDATE events SET done = 1 WHERE  ID = %s",(id,))
     mydb.commit()
-    mycursor.execute("SELECT * FROM events")
+    mycursor.execute("SELECT * FROM events WHERE done = 0")
     result = mycursor.fetchall()
     mycursor.close()
     mydb.close()

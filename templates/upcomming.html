@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/main.css' )}}">
 </head>
 <body>
-     <nav>
+    <nav>
         <div><a href="{{url_for('main')}}">main page</a></div>
         <div><a href="{{url_for('members')}}">members</a></div>
         <div><a href="{{url_for('done')}}">acomplishments</a></div>
@@ -26,6 +26,11 @@
             <th>actions</th>
         </tr>
     </table>
+    <div style="display: flex; flex-direction: column;">
+        <a href="/events/new_event"><button type="button">add new event</button></a>
+        <a href="/events/show_all"><button type="button">show finished events</button></a>
+    </div>
+
     <script src="{{url_for('static',filename='js/processes.js')}}"></script>
     <script src="{{url_for('static',filename='js/events.js')}}"></script>
 </body>
