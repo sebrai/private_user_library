@@ -155,12 +155,11 @@ def finish(id):
     mycursor = mydb.cursor()
     mycursor.execute("UPDATE events SET done = 1 WHERE  ID = %s",(id,))
     mydb.commit()
-    
-
-
-
     mycursor.execute("SELECT * FROM events")
     result = mycursor.fetchall()
+    mycursor.close()
+    mydb.close()
+    print(result)
     return render_template('upcomming.html', data = result)
 
 @app.route('/acomplishments')  # all pages dedaceded to the done page ------------------------------------------------------------------------------------
