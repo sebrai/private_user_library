@@ -6,11 +6,21 @@ for (let J = 0; J < data.length; J++) {
     for (let i = 0; i < element.length; i++) {
         const item = element[i];
         let text = document.createTextNode(item)
-        if (i== 5) {
-            text.textContent = Boolean(item)
+        let tbox;
+        if (i == 5) {
+            
+            tbox = document.createElement("input")
+            tbox.type = "checkbox"
+            tbox.disabled = true
+            tbox.checked = Boolean(item)
         }
+        else {
+            tbox = document.createElement("div")
+            tbox.appendChild(text)
+        }
+
         let box = document.createElement("td")
-        box.appendChild(text)
+        box.appendChild(tbox)
         row.appendChild(box)
     }
     let add_memberbtn = document.createElement("button")
