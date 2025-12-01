@@ -162,6 +162,45 @@ def finish(id):
     print(result)
     return render_template('upcomming.html', data = result)
 
+@app.route('/events/new_event', methods = ['POST','GET'])
+def newevent():
+    mydb = mysql.connector.connect(
+    host = host,
+    port= int(port),
+    user = userdb,
+    password = password, 
+    database = dbname,
+    use_pure=True
+    )
+    mycursor = mydb.cursor()
+    if request.method == 'POST':
+        title = request.form['title']
+        desc = request.form['desc']
+        scale = request.form['scale']
+        needed = int(request.form['needed'])
+        mycursor.execute("INSERT INTO events (title,descr,scale,members_needed) VALUES (%s,%s,%s,%s)",(title,desc,scale,needed))
+        mydb.commit()
+        mycursor.execute("SELECT * FROM events WHERE done = 0")
+        result = mycursor.fetchall()
+        return render_template('upcomming.html', data = result) 
+    return render_template('newevent.html')
+
+@app.route('/events/show_all')
+def show_all():
+    mydb = mysql.connector.connect(
+    host = host,
+    port= int(port),
+    user = userdb,
+    password = password, 
+    database = dbname,
+    use_pure=True
+    )
+    mycursor = mydb.cursor()
+    mycursor.execute("SELECT * FROM events")
+    result = mycursor.fetchall()
+    return render_template('upcomming.html', data = result)
+
+
 @app.route('/acomplishments')  # all pages dedaceded to the done page ------------------------------------------------------------------------------------
 def done():
     
