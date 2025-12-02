@@ -153,13 +153,21 @@ def finish(id):
     use_pure=True
     )
     mycursor = mydb.cursor()
-    mycursor.execute("UPDATE events SET done = 1 WHERE  ID = %s",(id,))
+    mycursor.execute("UPDATE events SET done = 1 WHERE  id = %s",(id,))
     mydb.commit()
+    mycursor.execute("SELECT * FROM events WHERE id = %s",(id,))
+    updateitem = mycursor.fetchone()
+    # print(updateitem)
+    if updateitem[5] == 0:
+        mycursor.execute("INSERT INTO done(title,descr,event_id) VALUES(%s,%s,%s)",(updateitem[1],updateitem[2]+", scale: "+updateitem[3],id))
+        mydb.commit()
+
+
     mycursor.execute("SELECT * FROM events WHERE done = 0")
     result = mycursor.fetchall()
     mycursor.close()
     mydb.close()
-    print(result)
+    # print(result)
     return render_template('upcomming.html', data = result)
 
 @app.route('/events/new_event', methods = ['POST','GET'])
@@ -220,8 +228,23 @@ def addcontibutor(id):
 
 @app.route('/acomplishments')  # all pages dedaceded to the done page ------------------------------------------------------------------------------------
 def done():
-    
-    return  render_template('done.html')
+    mydb = mysql.connector.connect(
+    host = host,
+    port= int(port),
+    user = userdb,
+    password = password, 
+    database = dbname,
+    use_pure=True
+    )
+    mycursor = mydb.cursor()
+    mycursor.execute("SELECT * FROM done")
+    result = mycursor.fetchall()
+    fresult = []
+    for items in result:
+       thing = (items[0],items[1],items[2],items[3].isoformat(),items[4])
+       fresult.append(thing)
+    # print(result,fresult)
+    return  render_template('done.html', data = fresult)
 
 if __name__ == '__main__':
     app.run(debug =True)
