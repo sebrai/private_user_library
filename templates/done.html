@@ -7,13 +7,28 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/main.css' )}}">
 </head>
 <body>
-     <nav>
+    <nav>
         <div><a href="{{url_for('main')}}">main page</a></div>
         <div><a href="{{url_for('members')}}">members</a></div>
         <div><a href="{{url_for('done')}}">acomplishments</a></div>
         <div><a href="{{url_for('events')}}">uppcomming events</a></div>
     </nav>
-    <div  id="data">{{data}}</div>
+    <div id="data">{{data}}</div>
+    <table id="datatable" class="datatable">
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>description</th>
+           <th>date finished</th>
+           <th>id in events</th>
+            
+           
+        </tr>
+    </table>
+
+
+
     <script src="{{url_for('static',filename='js/processes.js')}}"></script>
+    <script src="{{url_for('static',filename='js/done.js')}}"></script>
 </body>
 </html>
