@@ -200,6 +200,23 @@ def show_all():
     result = mycursor.fetchall()
     return render_template('upcomming.html', data = result)
 
+@app.route('/events/add_member/<id>')
+def addcontibutor(id):
+    mydb = mysql.connector.connect(
+    host = host,
+    port= int(port),
+    user = userdb,
+    password = password, 
+    database = dbname,
+    use_pure=True
+    )
+    mycursor = mydb.cursor()
+    mycursor.execute("UPDATE events SET cur_members = cur_members +1 WHERE id = %s",(id,))
+    mydb.commit()
+    mycursor.execute("SELECT * FROM events WHERE done = 0")
+    result = mycursor.fetchall()
+    return render_template('upcomming.html', data = result)
+
 
 @app.route('/acomplishments')  # all pages dedaceded to the done page ------------------------------------------------------------------------------------
 def done():
