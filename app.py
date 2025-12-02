@@ -157,8 +157,8 @@ def finish(id):
     mydb.commit()
     mycursor.execute("SELECT * FROM events WHERE id = %s",(id,))
     updateitem = mycursor.fetchone()
-    # print(updateitem)
-    if updateitem[5] == 0:
+    print(updateitem[5],type(updateitem[5]))
+    if updateitem[5] == 0 or "test" in updateitem[1] :
         mycursor.execute("INSERT INTO done(title,descr,event_id) VALUES(%s,%s,%s)",(updateitem[1],updateitem[2]+", scale: "+updateitem[3],id))
         mydb.commit()
 
