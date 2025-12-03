@@ -45,7 +45,7 @@
 
 ### Servermiljø
 
-*uses a flask python enviorment with flask, and mysql_connector installed*
+*uses a flask python enviorment with flask, dotenv and mysql_connector installed*
 
 *.env file keeps password and other imortant info safe*
 ### Nettverksoppsett
@@ -152,6 +152,7 @@ i use kanban to organize work
      ├── templates/
      ├── static/
      ├── .venv
+     ├── .gitignore
      └── .env
 Databasestrøm:
 
@@ -159,9 +160,54 @@ Databasestrøm:
 
 ------------------------------------------------------------------------
 
-## 7. Kodeforklaring
+## 7. Kode expanation
 
-Forklar ruter og funksjoner (kort).
+### @app.route 
+*route asks the function below for what to return when a spesific file path is in the browser*
+*for example: route "/" calls the function main for what to show and main return with a template of index.html*
+
+``` python
+       @app.route('/')
+        def main():
+        return render_template("index.html")
+```
+### mydb and my_cursor
+*these allow you to querry the backend database for data, it can also insert data.*
+*for example: route "/events/show_all" uses mycursor.execute to send in a querry to the databsae asking it to show all rows in events table.*
+*it then uses mycursur.fetchall to turn the data into a python tuple.*
+``` python
+        @app.route('/events/show_all')
+        def show_all():
+        mydb = mysql.connector.connect(# variables are taken from a .env file
+        host = host,
+        port = int(port),
+        user = userdb,
+        password = password, 
+        database = dbname,
+        use_pure = True
+        )
+        mycursor = mydb.cursor()
+        mycursor.execute("SELECT * FROM events")
+        result = mycursor.fetchall()
+        return render_template('upcomming.html', data = result) 
+```
+
+### processes.js
+*this file converts the text inside a elemnt with id data into a usable js array with the name data.*
+*it does this if the text is formated ass a python tuple like the data from fetchall is.*
+``` js
+        console.log("hello")
+        let raw = document.getElementById("data").textContent
+        function py_to_json(str = raw) {
+        
+        result = str.replaceAll("(", "[").replaceAll(")", "]").replaceAll("'", '"');
+        console.table(JSON.parse(result))
+        return result
+        }
+        let data = JSON.parse(py_to_json(raw))
+        console.table(data)
+```
+
 
 ------------------------------------------------------------------------
 
