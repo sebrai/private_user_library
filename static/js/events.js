@@ -7,19 +7,26 @@ for (let J = 0; J < data.length; J++) {
         const item = element[i];
         let text = document.createTextNode(item)
         let tbox;
+        let box = document.createElement("td")
         if (i == 5) {
-            
+
             tbox = document.createElement("input")
             tbox.type = "checkbox"
             tbox.disabled = true
             tbox.checked = Boolean(item)
+            if (!Boolean(item)) {
+                tbox.style.display = "none"
+                box.textContent = "X"
+                box.style.fontSize= "60px"
+                box.style.fontWeight= ""
+            }
         }
         else {
             tbox = document.createElement("div")
             tbox.appendChild(text)
         }
 
-        let box = document.createElement("td")
+
         box.appendChild(tbox)
         row.appendChild(box)
     }
