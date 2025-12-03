@@ -185,7 +185,8 @@ def newevent():
         title = request.form['title']
         desc = request.form['desc']
         scale = request.form['scale']
-        needed = int(request.form['needed'])
+        needed = request.form['needed']
+        needed = int(needed) if needed else 1
         mycursor.execute("INSERT INTO events (title,descr,scale,members_needed) VALUES (%s,%s,%s,%s)",(title,desc,scale,needed))
         mydb.commit()
         mycursor.execute("SELECT * FROM events WHERE done = 0")
