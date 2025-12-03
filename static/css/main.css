@@ -1,26 +1,30 @@
-body{
+body {
     background-color: blanchedalmond;
     margin: 0;
 }
-nav{
+
+nav {
     background-color: cadetblue;
-    width:100% ;
+    width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-nav div{
+
+nav div {
     font-size: x-large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-    
+
+
 }
-nav div a{
+
+nav div a {
     color: blanchedalmond;
     text-decoration: none;
 }
-.main{
+
+.main {
     width: 75%;
     margin: 0 auto;
     padding: 10px;
@@ -30,73 +34,90 @@ nav div a{
     background-color: cadetblue;
     border-radius: 25px;
 }
-.title{
+
+.title {
     font-size: xx-large;
     color: blanchedalmond;
     width: 60%;
     margin: 0 auto;
     margin-bottom: 2%;
 }
-.undertitle{
+
+.undertitle {
     font-size: x-large;
     color: blanchedalmond;
     margin: 2%;
-/* margin-top: 200px; */
+    /* margin-top: 200px; */
 }
-.part{
-background-color: cadetblue;
-border-radius: 10px;
-width: 90%;
-margin: 0 auto;
+
+.part {
+    background-color: cadetblue;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
 
 }
-.content{
-background-color: blanchedalmond;
-width: 95%;
-margin: 0 auto;
-border-radius: 15px;
-padding: 5px 0;
+
+.content {
+    background-color: blanchedalmond;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 5px 0;
 }
-.tekst{
+
+.tekst {
     padding: 10px;
 }
-.par{
+
+.par {
     color: blanchedalmond;
     font-size: large;
 }
-.datatable{
+
+.datatable {
     border: solid black 2px;
     min-width: 20%;
-    min-height: 20%; 
+    min-height: 20%;
     background-color: azure;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 20px;
+    max-width: 95vw;
 }
-.done .datatable tr td{
-   width: 150px;
-   
+
+.done .datatable tr td {
+    width: 150px;
+
 }
-td{
+
+td {
     aspect-ratio: 1/2;
     min-width: 100px;
     min-height: 50px;
     border: solid black 2px;
     border-radius: 8px;
     text-align: center;
-    padding: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 25px 10px;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
-  td a:nth-child(1) button{
+
+td a button {
+    padding: 5px;
+}
+
+td a:nth-child(1) button {
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px; 
-  }
-   td a:nth-child(2) button{
+    border-bottom-left-radius: 10px;
+}
+
+td a:nth-child(2) button {
     border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px; 
-  }
-form{
+    border-bottom-right-radius: 10px;
+}
+
+form {
     background-color: cadetblue;
     border-radius: 20px;
     width: 50%;
@@ -104,26 +125,32 @@ form{
     margin: 0 auto;
     margin-top: 10%;
     padding: 10px;
-    display:flex;
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
 }
-form input{
+
+form input {
     border-radius: 5px;
     /* margin-left: 10px; */
 }
-form .title{
+
+form .title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-form .content{
-    display:flex;
+
+form .content {
+    display: flex;
     justify-content: space-evenly;
 }
-input[type ="checkbox"]{
+
+input[type="checkbox"] {
     color: black;
     background-color: black;
     aspect-ratio: 1/1;
-    height: 100%;
-    filter: invert(100%) hue-rotate(18deg) brightness(5); /* Example filter */
+    /* height: 100%; */
+    width: 50%;
+    filter: invert(100%) hue-rotate(18deg) brightness(5);
+    /* Example filter */
 }

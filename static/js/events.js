@@ -36,6 +36,7 @@ for (let J = 0; J < data.length; J++) {
     finish.href = "/events/finish/" + element[0]
 
     let control = document.createElement("td")
+    control.style.width = "20%"
     control.appendChild(add_member)
     control.appendChild(finish)
     row.appendChild(control)

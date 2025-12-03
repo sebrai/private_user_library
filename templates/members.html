@@ -14,7 +14,7 @@
         <div><a href="{{url_for('events')}}">uppcomming events</a></div>
     </nav>
     <div  id="data" hidden>{{data}}</div>
-    <table id="table" class="datatable"></table>
+    <table id="table" class="datatable"><!-- data goes here throug JS --></table>
     <a href="{{url_for('addmem')}}"> <button>add new</button></a>
 </body>
 <script src="{{url_for('static',filename='js/processes.js')}}"></script>
