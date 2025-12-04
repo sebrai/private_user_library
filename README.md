@@ -50,14 +50,23 @@
 *.env file keeps password and other imortant info safe*
 ### Nettverksoppsett
 
--   Nettverksdiagram
--   IP-adresser\
+-   nettwork: 
+![a diagram of my network](bilder/image.png)
+
+
+-   IP-adresser:
+```
+        rapsberry pi database sever: 10.200.14.13
+        laptop website host: any 
+```
+
 -   Porter\
--   Brannmurregler
+```
+        rapsberry pi database sever: 3306 (mariadb)
+        laptop website host: 5000
+```
 
-Eksempel:
-
-    Klient → Waitress → MariaDB
+-   firewall: *currently the website isnt deployed so no firewall changes have had to be made*
 
 ### Tjenestekonfigurasjon
 
@@ -160,7 +169,7 @@ Databasestrøm:
 
 ------------------------------------------------------------------------
 
-## 7. Kode expanation
+## 7. Kode eksplanation
 
 ### @app.route 
 *route asks the function below for what to return when a spesific file path is in the browser*
@@ -193,7 +202,7 @@ Databasestrøm:
 ```
 
 ### processes.js
-*this file converts the text inside a elemnt with id data into a usable js array with the name data.*
+*this file converts the text inside a elemnt with id "data" into a usable js array with the name data.*
 *it does this if the text is formated ass a python tuple like the data from fetchall is.*
 ``` js
         console.log("hello")
