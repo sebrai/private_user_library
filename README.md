@@ -224,17 +224,40 @@ Databasestrøm:
 
 
 -   Miljøvariabler: *password, host, port, user and db*\
--   Parameteriserte spørringer\
--   Validering\
--   Feilhåndtering
+-   Parameteriserte spørringer: 
+``` python
+         mycursor = mydb.cursor() #alter mebers page
+        mycursor.execute("UPDATE members SET name = %s , email = %s WHERE id = %s",(name,email,id))
+        mydb.commit()
+        mycursor.execute("SELECT * FROM members")
+        result = mycursor.fetchall()
+        fresult = []
+        for items in result:
+            thing = (items[0],items[1],items[2],items[3].isoformat()) #to make sure datetime is conveted properly
+            fresult.append(thing)
+        return render_template('members.html',data = fresult)
+```
 
 ------------------------------------------------------------------------
 
-## 9. Feilsøking og testing
+## 9. errors along the way
 
--   Typiske feil\
--   Hvordan du løste dem\
--   Testmetoder
+-   error example:
+
+```
+mysql.connector.errors.DataError
+mysql.connector.errors.DataError: 1366 (22007): Incorrect integer value: '' for column `evil_lm`.`events`.`members_needed` at row 1
+```
+*it apeares because the members needed column on the table is meant to be an int,*
+*but what i am trying to putt in is " "*
+
+- error fix
+
+*i fixed this by adding in the second line*
+``` python
+        needed = request.form['needed']
+        needed = int(needed) if needed else 1
+```
 
 ------------------------------------------------------------------------
 
@@ -249,5 +272,7 @@ Databasestrøm:
 
 ## 11. sources
 
--   w3schools\
+-   w3schools.com/js/default.asp
+-   http://w3schools.com/mysql/default.asp
+-   w3schools.com/python/default.asp
 -   flask.palletsprojects.com
