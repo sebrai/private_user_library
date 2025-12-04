@@ -203,7 +203,7 @@ def show_all():
     use_pure=True
     )
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM events")
+    mycursor.execute("SELECT * FROM events ORDER BY done ASC, id ASC")
     result = mycursor.fetchall()
     return render_template('upcomming.html', data = result)
 
