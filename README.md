@@ -159,7 +159,22 @@ i use kanban to organize work
     evil_LM/
      ├── app.py
      ├── templates/
+                ├── index.html  
+                ├── members.html  
+                ├── upcomming.html  
+                ├── done.html  
+                ├── addmem.html  
+                ├── newevent.html  
+                ├── altermem.html       
      ├── static/
+                ├── css/
+                        ├── main.css
+                ├── js/
+                        ├── done.js
+                        ├── events.js
+                        ├── members.js
+                        ├── processes.js
+                ├── favicon.png
      ├── .venv
      ├── .gitignore
      └── .env
