@@ -148,7 +148,7 @@ i use kanban to organize work
 ```
 ------------------------------------------------------------------------
 
-## 6. Programstruktur
+## 6. file structure
 
     evil_LM/
      ├── app.py
@@ -181,6 +181,7 @@ Databasestrøm:
 ## 7. Kode eksplanation
 
 ### @app.route 
+
 *route asks the function below for what to return when a spesific file path is in the browser*
 *for example: route "/" calls the function main for what to show and main return with a template of index.html*
 
@@ -189,10 +190,13 @@ Databasestrøm:
         def main():
         return render_template("index.html")
 ```
+
 ### mydb and my_cursor
+
 *these allow you to querry the backend database for data, it can also insert data.*
 *for example: route "/events/show_all" uses mycursor.execute to send in a querry to the databsae asking it to show all rows in events table.*
 *it then uses mycursur.fetchall to turn the data into a python tuple.*
+
 ``` python
         @app.route('/events/show_all')
         def show_all():
@@ -211,8 +215,10 @@ Databasestrøm:
 ```
 
 ### processes.js
+
 *this file converts the text inside a elemnt with id "data" into a usable js array with the name data.*
 *it does this if the text is formated ass a python tuple like the data from fetchall is.*
+
 ``` js
         console.log("hello")
         let raw = document.getElementById("data").textContent
@@ -229,7 +235,7 @@ Databasestrøm:
 
 ------------------------------------------------------------------------
 
-## 8. Sikkerhet og pålitelighet
+## 8. security
 
 
 -   Miljøvariabler: *password, host, port, user and db*\
@@ -265,16 +271,19 @@ mysql.connector.errors.DataError: 1366 (22007): Incorrect integer value: '' for 
 *i fixed this by adding in the second line*
 ``` python
         needed = request.form['needed']
-        needed = int(needed) if needed else 1
+        needed = int(needed) if needed else 1 #turns needed into an integer if possible otherwise it becomes 1
 ```
 
 ------------------------------------------------------------------------
 
-## 10. Konklusjon og refleksjon
+## 10. konklution and reflektion
 
--   Hva lærte du?\
--   Hva fungerte bra?\
--   Hva ville du gjort annerledes?\
+-   i learned a lot about programing with flask 
+
+-   Hva fungerte bra?
+
+-   Hva ville du gjort annerledes?
+
 -   Hva var utfordrende?
 
 ------------------------------------------------------------------------
