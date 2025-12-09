@@ -68,12 +68,6 @@
 
 -   firewall: *currently the website isnt deployed so no firewall changes have had to be made*
 
-### Tjenestekonfigurasjon
-
--   systemctl / Supervisor\
--   Filrettigheter\
--   Miljøvariabler
-
 ------------------------------------------------------------------------
 
 ## 4. Prosjektstyring -- GitHub Projects (Kanban)
