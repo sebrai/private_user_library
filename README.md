@@ -33,6 +33,12 @@
 **uses:**\
 *from any page you have acces to to go to a front page with info, memebers page containing all memebers, a accomplisments page where you see stuff that has already been completed and the companys future goals*
 
+**user guide:**
+
+guide: [guide.md](./guide.md)
+
+
+
 **Teknologier brukt:**
 
 -   Python / Flask\
