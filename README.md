@@ -39,7 +39,7 @@ guide: [guide.md](./guide.md)
 
 
 
-**Teknologier brukt:**
+**tegnologies used:**
 
 -   Python / Flask\
 -   MariaDB\
