@@ -120,7 +120,7 @@ td a:nth-child(2) button {
 form {
     background-color: cadetblue;
     border-radius: 20px;
-    width: 50%;
+    width: 70%;
     min-height: 30vh;
     margin: 0 auto;
     margin-top: 5%;
@@ -146,8 +146,14 @@ form .title {
 
 form .content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+
+    
 }
+/* form.content .inner{
+display: flex;
+flex-direction: row;
+} */
 
 input[type="checkbox"] {
     color: black;

@@ -10,16 +10,17 @@
 </head>
 
 <body>
-       <form method="post">
+    <form method="post">
         <h1 class="title">add new member!</h1>
         <div class="content">
-            <input type="text" name="name" id="name" placeholder="your name">
-            <input type="email" name="email" id="email" placeholder="your email">
+            <div class="inner">
+                <input type="text" name="name" id="name" placeholder="your name">
+                <input type="email" name="email" id="email" placeholder="your email">
+            </div>
             <input type="submit" value="submit">
         </div>
 
     </form>
-    <script src="{{url_for('static',filename='js/processes.js')}}"></script>
 </body>
 
 </html>
