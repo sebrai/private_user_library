@@ -13,3 +13,9 @@
 
 ![g2](./bilder/g2.png)
 
+*here you can see id,name,email and the date they joined*
+
+### add member:
+
+![screenshot of page](./bilder/g3.png)
+*here you enter you name and email to add a new entry into members*
