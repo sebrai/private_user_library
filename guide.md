@@ -27,3 +27,22 @@
 
 *here you can change details about a member,*
 *for example alter the name if it was mispelled*
+
+## events page
+*here you can:* **add a new event, show all events** *(includes completed)* **, join the event, and mark it as finished**
+
+![g5](./bilder/g5.png)
+
+## join effort:
+
+*this button adds one to count accepted*
+
+## finish:
+
+*sets the rows finished to true, this changes the* **" X "** *to a* **" ✓ "**
+
+
+## show all events:
+
+![g6](./bilder/g6.png)
+*now you can see all finished events to*
