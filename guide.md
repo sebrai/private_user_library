@@ -7,6 +7,8 @@
 - *simply click on the tekst in the navbar to acces the page*
 - *here you can also find info about the company currently this is blanc*
 
+---
+
 ## members page:
 *here you have acces to look at the members table here you can add a member(red)*
 *or you can edit or delte individual members row(blue)*
@@ -27,6 +29,8 @@
 
 *here you can change details about a member,*
 *for example alter the name if it was mispelled*
+
+---
 
 ## events page
 *here you can:* **add a new event, show all events** *(includes completed)* **, join the event, and mark it as finished**
@@ -55,3 +59,14 @@
 - *a description of the event*
 - *the scale of the event, for eksample how many people are needed or how long the task takes*
 - *and lastly you need to insert a number of how many people are required for the event*
+
+---
+
+## accomplishments
+![g8](./bilder/g8.png)
+*when on the accomplishments page you can see:*
+- *the title of the finished* **event**
+- *a larger description including both the* **event** *description and the event scale*
+- *date finished*
+- *its relevant id in the* **events** *page*
+
