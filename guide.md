@@ -33,19 +33,25 @@
 
 ![g5](./bilder/g5.png)
 
-## join effort:
+### join effort:
 
-*this button adds one to count accepted*
+*this button adds one to:* **"count accepted"**
 
-## finish:
+### finish:
 
 *sets the rows finished to true, this changes the* **" X "** *to a* **" ✓ "**
 
 
-## show all events:
+### show all events:
 
 ![g6](./bilder/g6.png)
 *now you can see all finished events to*
 
-## new event
+### new event
 ![g7](./bilder/g7.png)
+*if you press* **"add new event"** *you are taken to* **this** *page^*
+*here you need to insert:*
+- *event tilte*
+- *a description of the event*
+- *the scale of the event, for eksample how many people are needed or how long the task takes*
+- *and lastly you need to insert a number of how many people are required for the event*
