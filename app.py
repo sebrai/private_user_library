@@ -218,8 +218,15 @@ def addcontibutor(id):
     use_pure=True
     )
     mycursor = mydb.cursor()
-    mycursor.execute("UPDATE events SET cur_members = cur_members +1 WHERE id = %s",(id,))
-    mydb.commit()
+    
+    mycursor.execute("SELECT * FROM events WHERE id = %s",(id,))
+    updateitem = mycursor.fetchone()
+    if updateitem[5] == 0:
+        # print("its not finished")
+        mycursor.execute("UPDATE events SET cur_members = cur_members +1 WHERE id = %s",(id,))
+        mydb.commit()
+    else:
+        print("item has already been finshed")
     mycursor.execute("SELECT * FROM events WHERE done = 0")
     result = mycursor.fetchall()
     return render_template('upcomming.html', data = result)
