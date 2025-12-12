@@ -22,10 +22,11 @@
 ### d. events page
 
 *shows uppcomming events*
+*you have the option to join inn on a task, sett it to finished, add new event and see all events*
 ------------------------------------------------------------------------
 
 
-## 2. Systembeskrivelse
+## 2. sytem description
 
 **hub for memebers of evil LM**\
 *the website shares what evil LM does and makes it easy for members to see future plans*
@@ -47,7 +48,7 @@ guide: [guide.md](./guide.md)
 
 ------------------------------------------------------------------------
 
-## 3. Server-, infrastruktur- og nettverksoppsett
+## 3.infrastructure
 
 ### Servermiljø
 
@@ -76,15 +77,15 @@ guide: [guide.md](./guide.md)
 
 ------------------------------------------------------------------------
 
-## 4. Prosjektstyring -- GitHub Projects (Kanban)
+## 4. projekt page(github)
 
-https://github.com/users/sebrai/projects/3/views/1
+[link to projekt](https://github.com/users/sebrai/projects/3/views/1)
 
 i use kanban to organize work
 
 ------------------------------------------------------------------------
 
-## 5. Databasebeskrivelse
+## 5. databse description
 
 **Database name: evil_lm**
 
