@@ -287,11 +287,11 @@ mysql.connector.errors.DataError: 1366 (22007): Incorrect integer value: '' for 
 
 -   i learned a lot about programing with flask 
 
--   Hva fungerte bra?
+-   i had fun developing, and it went pretty smoothly
 
--   Hva ville du gjort annerledes?
+-   i would like to have rearned how to use sessions so that i could restrict content shown based on hvo is loged in
 
--   Hva var utfordrende?
+-   being able to know what eatch error message means
 
 ------------------------------------------------------------------------
 
