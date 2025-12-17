@@ -5,7 +5,7 @@
 **evil LM:**\
 **Sebastian Branden:**\
 **2IMI:**\
-**10/11/25:**
+**started on: 10/11/25**
 **description:**\
 *this is a hub for evil LM where you can see future plans, members and already executed missions*
 
@@ -118,6 +118,8 @@ i use kanban to organize work
         | event_id | int(11)      | YES  | MUL | NULL            |                |
         +----------+--------------+------+-----+-----------------+----------------+
 ```
+*event_id is a foreign key to events*
+
 **events(upcomming):**
 
 ``` sql
