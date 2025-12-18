@@ -118,7 +118,9 @@ i use kanban to organize work
         | event_id | int(11)      | YES  | MUL | NULL            |                |
         +----------+--------------+------+-----+-----------------+----------------+
 ```
-*event_id is a foreign key to events*
+*event_id is a foreign key to events, it shows what id that item has in events table*
+
+*title is derived from events.title, description is derived from events.descr and events.scale*
 
 **events(upcomming):**
 
