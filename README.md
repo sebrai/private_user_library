@@ -301,7 +301,7 @@ mysql.connector.errors.DataError: 1366 (22007): Incorrect integer value: '' for 
 
 ## 11. sources
 
--   w3schools.com/js/default.asp
+-   http://w3schools.com/js/default.asp
 -   http://w3schools.com/mysql/default.asp
--   w3schools.com/python/default.asp
--   flask.palletsprojects.com
+-   http://w3schools.com/python/default.asp
+-   http://flask.palletsprojects.com
